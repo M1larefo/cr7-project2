@@ -4,11 +4,7 @@
   "description": "",
   "main": "cr7.js",
   "scripts": {
-<<<<<<< HEAD
     "build": "node node_modules/webpack/bin/webpack.js --mode production",
-=======
-  "build": "node node_modules/webpack/bin/webpack.js --mode production",
->>>>>>> accfdbe8e68e2791700216385d6c00bf005d92df
     "dev": "node node_modules/webpack/bin/webpack.js --mode development --watch",
     "start": "webpack serve --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
