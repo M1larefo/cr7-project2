@@ -1,25 +1,19 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // Clean dist folder before each build
+    publicPath: '/'
   },
   mode: 'production',
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
-  }
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'CR7 Project',
+      template: './src/index.html', // Make sure this file exists
+      filename: 'cr7.html' // Explicit output filename
+    })
+  ]
 };
