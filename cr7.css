@@ -1,0 +1,454 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+   background-color: rgb(207, 249, 255);
+}
+.pitch {
+  
+    width: 100%;
+    height: 700px;
+position: absolute;
+top:-160px;
+background: transparent;
+}
+.tit {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0px;
+    align-items: center;
+    left: 5%;
+    width: 100%;
+}
+.goal {
+    cursor: pointer;
+    width: 10%;
+    height: 120px;
+    position: absolute;
+    rotate: 15deg;
+    left: 80%;
+    top: 240px;
+}
+
+.goal2 {
+    cursor: pointer;
+    width: 10%;
+    height: 130px;
+    transform: scaleX(-1);
+    rotate: -15deg;
+    position: absolute;
+    left: 11%;
+    top: 240px;
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.go {
+    width: 12%;
+    min-width: 90px;
+    height: 70px;
+    align-items: center;
+    position: absolute;
+    top: 560px;
+    color: rgb(3, 6, 0);
+    font-size: xx-large;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(45deg, rgb(56, 207, 56), rgb(42, 165, 184));
+    border-radius: 20px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.cr7-moving {
+    cursor: pointer;
+    width: 12%;
+    height: 210px;
+    position: absolute;
+    display: none;
+    left: 67%;
+    top: 140px;
+    background: transparent;
+    color: rgb(207, 74, 56);
+    animation: 1.5s ease-in-out 0s 1 normal cris;
+}
+.ball{
+    cursor: pointer;
+    width: 48px;
+    height: 45px;
+    position: absolute;
+    left: 47.4%;
+    top: 310px;
+    background: transparent;
+    display:none;
+   animation: 0.6s ease-in-out 0.5s 1 normal ball;
+}
+@keyframes shoot{
+ 0%{
+ left:46%;
+ top: 140px;
+ }
+ 100%{
+ left:44%;
+ rotate:15deg;
+ top: 140px;
+ }
+   
+}
+@keyframes pregoon{
+ 0%{
+ left:46%;
+ top: 140px;
+ }
+ 100%{
+ left: 32.6%;
+ top: 120px;
+ } 
+}
+@keyframes goon{
+ 0%{
+ left:32.6%;
+ top: 120px;
+ }
+  50%{
+ left:28%;
+ top: 120px;
+ } 
+ 100%{
+ left:32.6%;
+ top: 120px;
+ } 
+}
+
+
+@keyframes ball{
+ 0%{
+ left:47.4%;
+ top:310px
+ }
+25%{
+ left:42.4%;
+ top:190px;
+ rotate:90deg;
+ }
+
+  50%{
+left:32%;
+ top: 70px;
+ rotate:180deg;
+ }
+ 75%{
+ left:21%;
+ top:190px;
+ rotate:270deg;
+ }
+ 100%{
+ left:17%;
+ top: 280px;
+ rotate:360deg;
+ }
+   
+}
+
+@keyframes cris{
+ 0%{
+ left:67%;
+ top: 140px
+ }
+  10%{
+left:63%;
+ top: 130px
+ }
+ 20%{
+left:55%;
+ top: 150px
+ }
+ 30%{
+left:50%;
+ top: 140px
+ }
+ 40%{
+left:46%;
+ top: 155px
+ }
+  50%{
+left:58%;
+ top: 140px
+ }
+ 60%{
+left:47%;
+ top: 150px
+ }
+  70%{
+left:45%;
+ top: 120px
+ }
+ 80%{
+left:47%;
+ top: 160px
+ }
+  90%{
+left:50%;
+ top: 150px
+ }
+ 100%{
+ left:47%;
+ top: 130px;
+ }
+   
+}
+
+@keyframes messi{
+ 0%{
+ left:27%;
+ top: 140px
+ }
+  10%{
+left:33%;
+ top: 130px
+ }
+ 20%{
+left:35%;
+ top: 150px
+ }
+ 30%{
+left:29%;
+ top: 140px
+ }
+ 40%{
+left:32%;
+ top: 155px
+ }
+  50%{
+left:38%;
+ top: 140px
+ }
+  55%{
+left:35%;
+ top: 120px
+ }
+ 63%{
+left:25%;
+ top: 140px
+ }
+ 82%{
+ left:28%;
+ top: 140px;
+ }
+ 
+ 92%{
+ left:27%;
+ top: 100px;
+ }
+
+ 100%{
+ left:28%;
+ top: 140px;
+ }
+}
+.cr7-pregoon {
+    cursor: pointer;
+    width: 16%;
+    height: 210px;
+    position: absolute;
+    display:none;
+    left: 46%;
+    top: 140px;
+    animation: 0.68s ease-out normal 1 pregoon;
+    background: transparent;
+    transition: 1s ease-out;
+}
+
+.cr7-goon {
+    cursor: pointer;
+    width: 16%;
+    height: 210px;
+    position: absolute;
+    display:none;
+    left: 32.6%;
+    top: 120px;
+    animation: 0.5s ease-out  normal infinite goon;
+    background: transparent;
+}
+.speed1{
+       cursor: pointer;
+    position: absolute;
+ font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    left:65%;
+    bottom:185px;
+   
+}
+.speedinput{
+       cursor: pointer;
+    position: absolute;
+ font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+ width:90px;
+ padding-left: 2px;
+    font-size: 30px;
+    font-weight: 700;
+    left:72%;
+    bottom:212px;
+    border-radius: 10px;
+   
+}
+
+.speed2{
+       cursor: pointer;
+    position: absolute;
+ font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    left:79.6%;
+    bottom:184px;
+   
+}
+.set{
+  width: 8%;
+    min-width: 90px;
+    height: 45px;
+    position: absolute;
+    left:82.6%;
+    top: 495px;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(35deg, rgb(8, 8, 7), rgb(255, 167, 3));
+    border-radius: 20px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.goon{
+  width: 12%;
+    min-width: 110px;
+    height: 65px;
+    position: absolute;
+    left:22.6%;
+    top: 495px;
+    color: rgb(255, 0, 0);
+    font-size: xx-large;
+    font-weight: 500;
+    cursor: pointer;
+    background: rgb(207, 200, 200);
+    border-radius: 20px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.siu{
+  width: 12%;
+    min-width: 110px;
+    height: 65px;
+    position: absolute;
+    left:5.6%;
+    top: 495px;
+    color: rgb(22, 7, 7);
+    font-size: xx-large;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(65deg, rgb(165, 165, 159), rgb(173, 156, 123));
+    border-radius: 20px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+.cr7-stand-copy, .cr7-stand {
+    cursor: pointer;
+    width: 16%;
+    height: 210px;
+    position: absolute;
+    left: 64%;
+    top: 140px;
+    background: transparent;
+    transition: 1s ease-out;
+}
+.cr7-stand{
+    display:none;
+animation: 0.5s ease-in-out 0s 1 normal shoot;
+}
+.messi-stand {
+    cursor: pointer;
+    width: 11%;
+    height: 180px;
+    position: absolute;
+    display: block;
+    left: 25%;
+    top: 170px;
+   
+    background: transparent;
+}
+.messi {
+    cursor: pointer;
+    width: 11%;
+    height: 180px;
+    position: absolute;
+    display: none;
+    left: 25%;
+    top: 170px;
+    animation: 2.5s ease-in-out 0s 1 normal messi;
+    background: transparent;
+}
+@media screen and (width <= 500px) {
+ .siu{
+    font-size: 26px;
+    font-weight: 700;
+    margin-right: 5px;
+ }
+ .goon{
+     left:5.6%;
+    top: 565px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 5px;
+ }
+ .tit {
+   top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.speedinput{
+     left:68%;
+    bottom:162px;
+}
+.speed2{
+     left:96%;
+    bottom:138px;
+}
+.set{
+    left:68.6%;
+    top: 600px;
+}
+.go{
+     font-size: 24px;
+}
+.ball{
+     width: 28px;
+    height: 25px;
+}
+.cr7-goon, .cr7-pregoon ,.cr7-stand , .cr7-stand-copy{
+    width:26%;
+}
+.cr7-stand , .cr7-stand-copy{
+    left:55%;
+}
+.cr7-moving{
+    width:20%;
+    left:55%;
+}
+.messi , .messi-stand{
+    width:15%;
+    left:22%;
+}
+}
